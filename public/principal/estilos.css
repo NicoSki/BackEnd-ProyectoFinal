@@ -1,0 +1,55 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.marca img{
+  margin-left: 40%;
+}
+
+.marca{
+    background-color: black;
+}
+
+.boton_carrito{
+    position: relative;
+    left: 90%;
+}
+
+
+#cartas{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+#cartas img:hover{
+    cursor: pointer;
+}
+
+
+footer{
+    background-color: black;
+}
+
+footer ul{
+    color: white;
+    text-align: center;
+}
+footer ul li{
+    list-style-type: none;
+    padding: 1%;
+}
+
+footer .redes{
+    display: flex;
+    justify-content: center;
+}
+
+
+footer .redes svg:hover{
+    cursor: pointer;
+    padding: 5%;
+}
