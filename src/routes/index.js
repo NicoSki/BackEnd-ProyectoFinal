@@ -40,4 +40,11 @@ router.get("/api/productos/zapatillas", (req, res) => {
 })
 
 
+/*--------------------------
+        CARRITO
+---------------------------*/
+router.get("/api/carrito", (req, res) => {
+    res.render("secciones/carrito");
+})
+
 module.exports = router;
