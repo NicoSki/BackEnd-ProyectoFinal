@@ -1,0 +1,74 @@
+<%- include("../partials/head.ejs") %>
+
+
+  <body>
+    <h1 class="text-center bg-primary mt-3">PERFIL</h1>
+
+    <br>
+
+    <div>
+      <button class="btn btn-primary position-absolute end-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Cambiar Imagen de Perfil
+        <i class="fas fa-edit"></i>
+      </button>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modificar Perfil</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="file">
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="cambio" class="btn btn-primary">Cambiar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="container p-3 mb-2 bg-primary text-white">
+      <h2 class="text-center">Bienvenido <%= nombre %>!</h2>
+
+      <div class="card m-auto" style="width: 18rem;">
+        <img
+          src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+          class="card-img-top rounded-5" id="img" alt=" perfil">
+        <div class="card-body">
+          <p style="color: black;text-align: center;">Tus Datos:</p>
+        </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item">Edad: <%= edad %>
+          </li>
+          <li class="list-group-item">📱 <%= telefono %>
+          </li>
+          <li class="list-group-item">🚩 <%= direccion %>
+          </li>
+        </ul>
+        <div class="card-body text-center">
+          <a href="/" class="card-link">Ver productos</a>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <script>
+      let boton = document.getElementById("cambio");
+      let img = document.getElementById("img");
+      boton.addEventListener("click", () => {
+        console.log(img);
+      })
+    </script>
+  </body>
+
+  </html>
